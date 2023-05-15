@@ -1208,7 +1208,6 @@ void setup() {
   initSdCart();
   getUpdatedTime();
   sampling_period_us = 10;
-  pinMode(2, OUTPUT);
   Serial.print("loop() running on core ");
   Serial.println(xPortGetCoreID());
   delay(2000);
