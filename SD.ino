@@ -6,8 +6,9 @@ void initSdCart() {
     Serial.println("SD card initialization failed!");
     delay(200);
     digitalWrite(2, LOW);
+  } else {
+    Serial.println("SD card initialized.");
   }
-  Serial.println("SD card initialized.");
 
 
 

@@ -2,7 +2,7 @@ void startMPU() {
 
 
   int connectionTry = 3;
-  long sensorCheckTimeDelay = 3000 ;
+  long sensorCheckTimeDelay = 200 ;
   while (connectionTry != 0) {
     if (!mpu.begin(0x69, &I2Cone, 1)) {
       Serial.println("Failed to find MPU6050 chip ( SENSOR 1 )  Try => " + String(connectionTry));

@@ -1196,6 +1196,8 @@ void saveAllDataToSdCart() {
 
 
 
+TaskHandle_t Task2;
+
 
 void setup() {
   Serial.begin(115200);
@@ -1207,6 +1209,9 @@ void setup() {
   getUpdatedTime();
   sampling_period_us = 10;
   pinMode(2, OUTPUT);
+  Serial.print("loop() running on core ");
+  Serial.println(xPortGetCoreID());
+  delay(2000);
 }
 
 
@@ -1219,7 +1224,6 @@ void loop() {
   if (sensorOneActive) {
     getMpuOneData();
   }
-
   if (sensorTwoActive) {
     getMpuTwoData();
   }
@@ -1238,3 +1242,5 @@ void loop() {
   // scanI2COne();
   // scanI2CTwo();
 }
+
+
