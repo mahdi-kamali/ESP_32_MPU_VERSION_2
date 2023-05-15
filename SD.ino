@@ -1,11 +1,11 @@
 void initSdCart() {
   Serial.print("Initializing SD card...");
 
-  while (!SD.begin(SD_CHIP_SELECT)) {
-    digitalWrite(LED_BUILTIN, HIGH);
+  if (!SD.begin(SD_CHIP_SELECT)) {
+    digitalWrite(2, HIGH);
     Serial.println("SD card initialization failed!");
     delay(200);
-    digitalWrite(LED_BUILTIN, LOW);
+    digitalWrite(2, LOW);
   }
   Serial.println("SD card initialized.");
 

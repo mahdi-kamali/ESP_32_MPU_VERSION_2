@@ -1206,7 +1206,7 @@ void setup() {
   initSdCart();
   getUpdatedTime();
   sampling_period_us = 10;
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(2, OUTPUT);
 }
 
 
